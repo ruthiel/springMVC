@@ -5,7 +5,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.servlet.http.HttpServlet;
 
 /**
  * Created by codecadet on 12/12/16.
@@ -13,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 @Controller
 public class HelloController {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/hello")
+    @RequestMapping(method = RequestMethod.GET, value = "/")
     public String sayHello(Model model) {
 
         model.addAttribute("greeting", "Hello World");

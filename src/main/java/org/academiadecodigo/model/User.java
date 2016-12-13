@@ -1,13 +1,32 @@
 package org.academiadecodigo.model;
 
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotBlank;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+
 /**
  * Created by codecadet on 12/12/16.
  */
 public class User {
 
+
+    @NotNull(message = "username is mandatory")
+    @NotBlank(message = "username is mandatory")
+    @Pattern(regexp = "[a-z-A-Z]*", message = "username has invalid characters")
     private String username;
+
+    @NotNull
+    @Size(min = 5, max = 8)
     private String password;
+
+    @Email
     private String email;
+
 
     public User() {
     }

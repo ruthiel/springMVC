@@ -13,9 +13,15 @@
 </head>
 <body>
 <form:form method="post" modelAttribute="user">
-    <p>Name: <form:input path="username"/></p>
+
+    <p>Name: <form:input path="username"/>
+    </p>
+    <form:errors path="username" cssClass="error"/>
+
     <p>Password: <form:password path="password"/></p>
+
     <input type="submit" value="Login"/>
+
 </form:form>
 <div style="color:red">${error}</div>
 </body>

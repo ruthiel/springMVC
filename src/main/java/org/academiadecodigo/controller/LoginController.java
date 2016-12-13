@@ -10,6 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
@@ -19,6 +20,7 @@ import javax.validation.Valid;
  * Created by codecadet on 12/12/16.
  */
 @Controller
+@SessionAttributes("loginUser")
 public class LoginController {
 
     @Autowired

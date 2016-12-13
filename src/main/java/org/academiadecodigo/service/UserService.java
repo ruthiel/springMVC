@@ -12,6 +12,8 @@ public interface UserService {
 
     void addUser(User user);
 
+    void removeUser(User user);
+
     User findByName(String username);
 
     List<User> findAll();

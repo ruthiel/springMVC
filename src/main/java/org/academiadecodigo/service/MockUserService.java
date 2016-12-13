@@ -34,6 +34,17 @@ public class MockUserService implements UserService {
     }
 
     @Override
+    public void removeUser(User user) {
+        if (userMap.containsKey(user.getUsername())) {
+            userMap.remove(user.getUsername(), user);
+            System.out.println("User " + user.getUsername() + " removed!");
+
+        } else {
+            System.out.println(user.getUsername() + " doesn't exists!");
+        }
+    }
+
+    @Override
     public User findByName(String username) {
         return userMap.get(username);
     }

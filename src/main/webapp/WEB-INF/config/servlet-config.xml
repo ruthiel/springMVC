@@ -17,6 +17,7 @@
 
     <bean class="org.academiadecodigo.auth.Authenticator"></bean>
     <bean class="org.academiadecodigo.service.MockUserService"></bean>
+    <bean class="org.academiadecodigo.controller.UserController"></bean>
 
 
 </beans>

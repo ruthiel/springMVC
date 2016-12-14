@@ -29,7 +29,7 @@ public class LoginController {
     @Autowired
     private Authenticator authenticator;
 
-    @RequestMapping(method = RequestMethod.GET, value = "/login")
+    @RequestMapping(method = RequestMethod.GET, value = "/login")  // TODO: 14/12/16 quando faz login não imprime o nome
     public ModelAndView showLogin() {
 
 

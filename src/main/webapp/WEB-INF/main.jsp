@@ -45,7 +45,7 @@
                     <tr>
                         <td>${user.username}</td>
                         <td>${user.email}</td>
-                        <td><button><a href="/springMVC/user/remove/${user.username}">Delete</a></button></td>
+                        <td><button><a href="user/remove/${user.username}">Delete</a></button></td>
                     </tr>
                 </c:forEach>
             </table>

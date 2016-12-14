@@ -35,14 +35,14 @@
         </form:form>
 
         <h3 class="text-info">List of Users:</h3>
-        <c:if test="${not empty users}">
+        <c:if test="${not empty userMap}">
             <table class="table table-striped table-bordered">
                 <tr>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Action</th>
                 </tr>
-                <c:forEach var="user" items="${users}">
+                <c:forEach var="user" items="${userMap}">
                     <tr>
                         <td>${user.username}</td>
                         <td>${user.email}</td>

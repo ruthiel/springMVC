@@ -20,7 +20,7 @@ import javax.validation.Valid;
  * Created by codecadet on 12/12/16.
  */
 @Controller
-@SessionAttributes("userService")
+@SessionAttributes("loggedUser")
 public class LoginController {
 
     @Autowired
@@ -31,6 +31,7 @@ public class LoginController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/login")
     public ModelAndView showLogin() {
+
 
         ModelAndView modelAndView = new ModelAndView("login");
         modelAndView.addObject("user", new User());
@@ -54,7 +55,9 @@ public class LoginController {
 
         if (authenticator.authenticate(user.getUsername(), user.getPassword())) {
             model.addAttribute("greeting", "Welcome");
-            return "main";
+            model.addAttribute("userMap", userService.findAll());
+            model.addAttribute("loggedUser", user);
+            return "redirect:/users";
 
         } else {
             model.addAttribute("error", "Authentication Failure");

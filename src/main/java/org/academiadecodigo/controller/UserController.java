@@ -14,7 +14,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
  * Created by codecadet on 13/12/16.
  */
 @Controller
-@SessionAttributes("userService")
+@SessionAttributes("loggedUser")
 public class UserController {
 
     @Autowired
@@ -41,7 +41,8 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET, value = "/users")
     public String listUsers(Model model) {
         model.addAttribute("userMap", userService.findAll());
-        return "userMap";
+        model.addAttribute("user", new User());
+        return "main";
     }
 
 

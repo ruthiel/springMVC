@@ -23,7 +23,7 @@ public class UserController {
     @Autowired
     private Authenticator authenticator;
 
-    @RequestMapping(method = RequestMethod.POST, value = "/user/add")
+    @RequestMapping(method = RequestMethod.POST, value = "/users")
     public String addUser(Model model, @ModelAttribute User user, RedirectAttributes redirect) {
 
         userService.addUser(user);

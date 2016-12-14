@@ -54,7 +54,7 @@ public class LoginController {
         }
 
         if (authenticator.authenticate(user.getUsername(), user.getPassword())) {
-            model.addAttribute("greeting", "Welcome");
+//            model.addAttribute("greeting", "Welcome");
             model.addAttribute("userMap", userService.findAll());
             model.addAttribute("loggedUser", user);
             return "redirect:/users";

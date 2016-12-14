@@ -20,17 +20,16 @@
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-3">${user.username}</h1>
+        <h1 class="display-3">Olá ${user.username}</h1>
         <p class="lead">Welcome to this amazing application!!!<p>
+
         <form:form method="post" modelAttribute="user">
 
         <p>Name: <form:input path="username"/></p>
-
         <p>Password: <form:password path="password"/></p>
-
         <p>Email: <form:input path="email"/></p>
 
-        <input type="submit" value="Add User"/>
+        <input type="submit" value="Add User"></input>
 
         </form:form>
 
@@ -46,7 +45,7 @@
                     <tr>
                         <td>${user.username}</td>
                         <td>${user.email}</td>
-                        <td><button type="submit"><a href="/user/remove/${user.username}"/>Delete</button></td>
+                        <td><button><a href="/springMVC/user/remove/${user.username}">Delete</a></button></td>
                     </tr>
                 </c:forEach>
             </table>

@@ -32,9 +32,10 @@ public class UserController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/user/remove/{username}")
-    public String removeUser(Model model, @PathVariable String username) {
+    public String removeUser(Model model, @PathVariable String username, RedirectAttributes redirect) {
 
         userService.removeUser(username);
+        redirect.addFlashAttribute("removeMessage", username + " was deleted successfully!");
         return "redirect:/users";
     }
 

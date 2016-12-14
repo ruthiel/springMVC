@@ -31,6 +31,10 @@
 
         <input type="submit" value="Add User"></input>
 
+        <p>${addMessage}</p>
+        <p>${removeMessage}</p>
+
+
         </form:form>
 
         <h3 class="text-info">List of Users:</h3>
@@ -45,7 +49,7 @@
                     <tr>
                         <td>${user.username}</td>
                         <td>${user.email}</td>
-                        <td><button><a href="/springMVC/user/remove/${user.username}">Delete</a></button></td>
+                        <td><button><a href="user/remove/${user.username}">Delete</a></button></td>
                     </tr>
                 </c:forEach>
             </table>

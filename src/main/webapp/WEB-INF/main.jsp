@@ -31,6 +31,10 @@
 
         <input type="submit" value="Add User"></input>
 
+        <p>${addMessage}</p>
+        <p>${removeMessage}</p>
+
+
         </form:form>
 
         <h3 class="text-info">List of Users:</h3>

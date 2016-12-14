@@ -13,14 +13,14 @@
     <meta charset="utf-8">
     <meta name="generator" content="Bootply"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="styles.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
 </head>
 
 <body>
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-3">Olá ${user.username}</h1>
+        <h1 class="display-3">Olá ${loggedUser.toString()}!</h1>
         <p class="lead">Welcome to this amazing application!!!<p>
 
         <form:form method="post" modelAttribute="user">

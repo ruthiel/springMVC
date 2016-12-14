@@ -46,7 +46,7 @@
                     <tr>
                         <td>${user.username}</td>
                         <td>${user.email}</td>
-                        <td><button type="submit"><a href="/user/remove/"/>Delete</button></td>
+                        <td><button type="submit"><a href="/user/remove/${user.username}"/>Delete</button></td>
                     </tr>
                 </c:forEach>
             </table>

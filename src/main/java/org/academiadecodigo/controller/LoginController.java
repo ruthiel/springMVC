@@ -20,7 +20,7 @@ import javax.validation.Valid;
  * Created by codecadet on 12/12/16.
  */
 @Controller
-@SessionAttributes("loginUser")
+@SessionAttributes("userService")
 public class LoginController {
 
     @Autowired
@@ -35,7 +35,11 @@ public class LoginController {
         ModelAndView modelAndView = new ModelAndView("login");
         modelAndView.addObject("user", new User());
 
-        userService.addUser(new User("Ruthiel", "12345", "ruthiel.trevisan@gmail.com"));
+        userService.addUser(new User("Ruthiel", "admin", "ruthiel.trevisan@gmail.com"));
+        userService.addUser(new User("Eurico", "admin", "eurico@sapo.pt"));
+        userService.addUser(new User("Rafa", "admin", "rafa@sapo.pt"));
+        userService.addUser(new User("Mariana", "admin", "mariana@sapo.pt"));
+        userService.addUser(new User("Filipe", "admin", "filipe@sapo.pt"));
 
         return modelAndView;
 

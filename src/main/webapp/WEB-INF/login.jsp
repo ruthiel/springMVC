@@ -12,6 +12,7 @@
     <title>Login Form</title>
 </head>
 <body>
+<h1>Login Form</h1>
 <form:form method="post" modelAttribute="user">
 
     <p>Name: <form:input path="username"/>

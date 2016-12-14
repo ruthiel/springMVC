@@ -55,7 +55,13 @@ public class MockUserService implements UserService {
     }
 
     @Override
+    public User getUser(String username) {
+        return findByName(username);
+    }
+
+    @Override
     public long count() {
         return userMap.size();
     }
+
 }

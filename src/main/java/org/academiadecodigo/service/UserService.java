@@ -18,5 +18,7 @@ public interface UserService {
 
     List<User> findAll();
 
+    User getUser(String username);
+
     long count();
 }

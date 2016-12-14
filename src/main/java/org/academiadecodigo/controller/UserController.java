@@ -14,7 +14,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
  * Created by codecadet on 13/12/16.
  */
 @Controller
-@SessionAttributes("loginUser")
+@SessionAttributes("userService")
 public class UserController {
 
     @Autowired
@@ -34,7 +34,7 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET, value = "/user/remove/{username}")
     public String removeUser(Model model, @PathVariable String username) {
 
-        userService.removeUser();
+        userService.removeUser(userService.getUser(username));
         return "redirect:/main";
     }
 

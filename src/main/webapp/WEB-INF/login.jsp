@@ -18,7 +18,7 @@
 
 <head>
     <title>Login Form</title>
-    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <link rel="stylesheet" type="text/css" href="resources/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           type="text/css"/>
     <!-- script references -->

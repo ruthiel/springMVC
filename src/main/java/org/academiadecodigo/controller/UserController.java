@@ -41,6 +41,7 @@ public class UserController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/users")
     public String listUsers(Model model) {
+        model.addAttribute("loggedUser";
         model.addAttribute("userMap", userService.findAll());
         model.addAttribute("user", new User());
         return "main";

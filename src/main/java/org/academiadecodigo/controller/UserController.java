@@ -55,7 +55,7 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET, value = "/logout")
     public String logout(SessionStatus status) {
         status.setComplete();
-        return "redirect:/";
+        return "redirect:/login";
     }
 
 

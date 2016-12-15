@@ -55,7 +55,7 @@
             </table>
         </c:if>
         <div>
-            <button><a href="/logout">Logout</a></button>
+            <button><a href="logout">Logout</a></button>
         </div>
     </div>
 </div>

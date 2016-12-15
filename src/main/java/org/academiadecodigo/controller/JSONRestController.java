@@ -31,15 +31,30 @@ public class JSONRestController {
     public ResponseEntity<Void> addUser(@RequestBody User user) {
 
         userService.addUser(user);
-        return new ResponseEntity<Void>(HttpStatus.CREATED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/api/users/{username}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> removeUser(@PathVariable String username) {
 
         userService.removeUser(username);
-        return new ResponseEntity<Void>(HttpStatus.CREATED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/api/users/{username}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<User> getUser(@PathVariable String username) {
+
+
+        return new ResponseEntity<>(userService.getUser(username), HttpStatus.OK);
+    }
+
+    // TODO: 15/12/16 Criar método edit no USERSERVICE 
+//    @RequestMapping(method = RequestMethod.PUT, value = "/api/users/{username}", produces = MediaType.APPLICATION_JSON_VALUE)
+//    public ResponseEntity<Void> editUser(@PathVariable String username) {
+//
+//        userService.editUser(username);
+//        return new ResponseEntity<>(HttpStatus.OK);
+//    }
 
     @RequestMapping(method = RequestMethod.GET, value = "/api/users", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Collection> listUsers() {
@@ -47,11 +62,4 @@ public class JSONRestController {
         return new ResponseEntity<>(userService.findAll(), HttpStatus.OK);
 
     }
-
-//    @RequestMapping(method = RequestMethod.GET, value = "/users")
-//    public ResponseEntity<User> logout() {
-//
-//    }
-
-
 }

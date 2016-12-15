@@ -1,6 +1,7 @@
+org/academiadecodigo/controller/UserController.class
+org/academiadecodigo/service/MockUserService.class
 org/academiadecodigo/auth/Authenticator.class
 org/academiadecodigo/controller/LoginController.class
 org/academiadecodigo/model/User.class
-org/academiadecodigo/controller/UserController.class
-org/academiadecodigo/service/MockUserService.class
+org/academiadecodigo/controller/JSONRestController.class
 org/academiadecodigo/service/UserService.class

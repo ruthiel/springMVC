@@ -54,6 +54,9 @@
                 </c:forEach>
             </table>
         </c:if>
+        <div>
+            <button><a href="/logout">Logout</a></button>
+        </div>
     </div>
 </div>
 

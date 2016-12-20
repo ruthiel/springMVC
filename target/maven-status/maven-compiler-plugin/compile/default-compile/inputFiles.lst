@@ -1,6 +1,7 @@
 /Users/codecadet/IdeaProjects/SpringMVC/src/main/java/org/academiadecodigo/model/User.java
 /Users/codecadet/IdeaProjects/SpringMVC/src/main/java/org/academiadecodigo/controller/LoginController.java
 /Users/codecadet/IdeaProjects/SpringMVC/src/main/java/org/academiadecodigo/service/UserService.java
+/Users/codecadet/IdeaProjects/SpringMVC/src/main/java/org/academiadecodigo/controller/JSONRestController.java
 /Users/codecadet/IdeaProjects/SpringMVC/src/main/java/org/academiadecodigo/service/MockUserService.java
 /Users/codecadet/IdeaProjects/SpringMVC/src/main/java/org/academiadecodigo/auth/Authenticator.java
 /Users/codecadet/IdeaProjects/SpringMVC/src/main/java/org/academiadecodigo/controller/UserController.java

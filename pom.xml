@@ -60,6 +60,13 @@
             <version>2.8.0</version>
         </dependency>
 
+        <!-- Filter -->
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-catalina</artifactId>
+            <version>7.0.70</version>
+        </dependency>
+
     </dependencies>
 
     <build>
